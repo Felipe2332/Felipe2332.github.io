@@ -1,0 +1,237 @@
+/*CSS Document*/
+html{
+    height: 100%;
+    
+}
+body{
+        /*background-image: url('orangutan.jpg'); para usar a imagem direta, tem que estar na pasta senão tem que falar o caminho*/
+        /*background-repeat:repeat-y; vai se repetir em eixo y*/
+        /*background-attachment: fixed ou scroll que dizer se a imagem vai ser estatica ou acompanhar;*/
+        /*Pode-se escrever assim ou simplesmente background e ir citando tudo na mesma linha: backgorund: red url() no repeat right*/
+        background-color: black;
+        font-size: large;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        /*Ocupa todo o espaço de largura da página, antes nem o banner nem o rodapé estavam ocupando*/
+        
+}
+
+.texto_corpo{
+    color:white;
+    text-align: justify;
+    /*text-transform: capitalize;/*todas as primeiras letras maisucula*/
+    
+    font-family: Arial, Helvetica, sans-serif;/*fontes que serão aplicadas,se não tiver uma pula para proxima*/
+    text-shadow: 3px;
+}
+
+.corpo{
+        /*margin-right: 300px;
+        margin-left: 280px;*/
+        margin:auto;
+        height: auto;
+        min-height: 100%;
+        
+        margin-bottom:30px;
+        margin-top: -50px;
+        width: 60%;
+        padding-top: 15px;
+        padding-left: 10px;
+        padding-right: 20px;
+        padding-bottom: 10px;
+        border-radius: 20px;/*Bordas redondas*/
+        
+
+        
+        
+        
+
+        background-color: rgb(50, 49, 49); 
+}
+#banner{
+    width: 100%;
+    background-size:100%;
+    
+    height:350px;
+    top:90px;
+    background-position:center;
+    animation: changeBg 25s infinite ease-in;
+    
+    
+}
+
+
+/*Animação*/
+@keyframes changeBg{
+    0%{background-image:url(1118551.jpg)}
+    25%{background-image:url(1237268.png);}
+    50%{background-image:url(1142594.jpg);}
+    75%{background-image: url(1083242.png);}
+    100%{background-image: url(1022371.jpg);}
+}
+
+.cabecalho{
+    width: 99%;
+    position: fixed;
+    padding: 10px;
+    top:0;
+    left:0;
+    height: 40px;
+    background-color:black;
+    border-bottom:10px solid darkviolet;
+    
+}
+
+
+.texto_cabecalho {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+
+
+
+.rodape{
+    width: 100%;
+    padding: 5px;
+    height: 120px;
+    bottom:0;
+    margin-top: auto;
+    font-size: medium;
+    text-align: center;
+    background-color: grey;
+    
+}
+
+
+
+
+/*Tabelas*/
+table,th,td{
+    border: 1px solid blueviolet;
+    border-collapse: collapse;
+}
+table{
+    width: 100%;
+}
+td{
+    padding: 10px;;
+}
+/*Imagens*/
+img{
+    height: 380px;
+    max-width: 100%;
+    object-fit: cover;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+legend{
+    text-align: center;
+    font-size: smaller;
+    font-style:oblique;
+}
+
+.bloco_inicial{
+    /*height: 200px;
+    width: 100%;
+    background-color: aqua;
+    */
+    background-color: rgba(0,0,0,0.5);
+    width: auto;
+    height: 200px;
+    border-radius: 15px;
+    line-height: 200px;
+    
+    
+    
+}
+
+a.fill-div{
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    font-size: larger;
+    
+    
+}
+
+/*a.fill-div:hover{
+    
+}
+
+
+
+/*Listas*/
+li{
+    font-size: larger;
+    color:darkviolet;
+}
+
+/*Links*/
+a:link, a:visited{
+    /*text-decoration: none;remove sublinhado link*/
+    color:white;
+}
+a:hover, a:active{
+    color: darkviolet;
+}
+/*Cor do link e caixa sem visitar*/
+a:link.barra,a:visited.barra{
+    /*background-color:rgb(94, 189, 189);*/
+    color:white;
+    border: 2px solid rgb(94, 189, 189);
+    padding: 14px 25px;
+    text-decoration: none;
+    outline: 1px solid rgb(94, 189, 189);;
+    transition: 200ms ease;
+}
+/*Animação*/
+a:link.barra:hover{
+    outline-offset: -10px;
+    
+}
+/*Quando passar por cima. Esse . barra significa que eu só quis aplicar esse estilo de link na barra*/
+a:hover.barra, a:active.barra{
+    background-color: darkviolet;
+}
+
+
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:#323232;
+    width: 100%;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+  /* Links inside the dropdown */
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover{
+    background-color: darkviolet;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+                
