@@ -3,7 +3,7 @@ if (isset($_POST['Email'])) {
 
     // EDIT THE FOLLOWING TWO LINES:
     $email_to = "felipebarbosa22@hotmail.com";
-    $email_subject = "New form submissions";
+    $email_subject = "Novo email";
 
     function problem($error)
     {
