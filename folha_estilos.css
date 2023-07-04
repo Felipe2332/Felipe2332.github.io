@@ -44,10 +44,6 @@ body{
         border-radius: 20px;/*Bordas redondas*/
         
 
-        
-        
-        
-
         background-color: rgb(50, 49, 49); 
 }
 #banner{
@@ -107,6 +103,56 @@ body{
     text-align: center;
     background-color: grey;
     
+}
+/*Forms*/
+
+
+
+
+label{
+    line-height: 2.0;
+}
+
+.formulario{
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-family:Open Sans;
+    color: white;
+    font-size: 25px;
+    background-image: url(wp8719112-cyberpunk-night-city-wallpapers.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.botaoEnviar{
+    background-color: darkviolet;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s ease;
+    
+
+}
+
+.botaoEnviar:hover{
+    background-color: #323232;
 }
 
 

@@ -8,6 +8,8 @@
     <meta http-equiv="Content - Type" content="text/html" ; charset="utf-8">
     <meta charset="utf-8" />
 
+</head>
+
 <body>
     <!--. Aumentar padding do rodape em baixo-->
     <div class="texto_cabecalho cabecalho">
@@ -26,32 +28,33 @@
     </div>
     <div id="banner"></div>
 
-    <div class="corpo texto_corpo">
-        <h1>EM DESENVOLVIMENTO</h1>
-        <h3>Tem algo alguma sugestão? Preencha os campos abaixo por favor</h3>
-        <form id="fcf-form-id" class="fcf-form-class" method="post" action="https://formspree.io/f/mrgvwylp">
+    <div class="corpo texto_corpo " >
+        
+        <h2>Tem algo alguma sugestão? Preencha os campos abaixo por favor</h2>
 
-            <label for="Name" class="fcf-label">Nome</label>
-            <div class="fcf-input-group">
-                <input type="text" id="Name" name="Name" class="fcf-form-control" required>
+        <form class= "formulario" id= "meuForm" method="post" action="https://formspree.io/f/mrgvwylp">
+            <div>
+            <label for="Name">Nome:</label>
             </div>
-            <div class="fcf-form-group">
-                <label for="Email" class="fcf-label">E - Mail</label>
-                <div class="fcf-input-group">
-                    <input type="email" id="Email" name="Email" class="fcf-form-control" required>
-                </div>
-                <div class="fcf-form-group">
-                    <label for="Message" class="fcf-label">Sua sugestão</label>
-                    <div class="fcf-input-group">
-                        <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000"
-                            required></textarea>
-                    </div>
-                </div>
-                <div class="fcf-form-group">
-                    <button type="submit" id="fcf-button"
-                        class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Enviar</button>
-                </div>
+            <input type="text" id="nome" placeholder="Digite seu nome">
+            
+            <div>
+            <label for="Email">Seu E-mail:</label>
             </div>
+
+            <input type="email" id="email" placeholder="emailexemplo@outlook.com">
+            
+
+            <div>
+            <label>Sua sugestão:</label>
+            </div>
+
+            <textarea style="width: 80%; height: 150px;" rows="6" maxlength="3000" id="texto" placeholder="Qual sua sugestão?"></textarea>
+            <div>
+            <button class="botaoEnviar" type="submit" >Enviar</button>
+        </div>
+        </form>
+
     </div>
 
     <div class="rodape">
@@ -59,10 +62,34 @@
             técnica como programador front end assim como me expressar criativamente.</h3>
     </div>
 
+
+<!--Mensagem de erro-->
+    <script lang="javascript">
+        document.getElementById('meuForm').addEventListener('submit',function(event)
+        {
+            var inputDeNome = document.getElementById('nome');
+            var inputDeEmail = document.getElementById('email');
+            var inputDeTexto = document.getElementById('texto');
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if(!inputDeNome.value || !inputDeEmail.value || !inputDeTexto.value)
+            {
+                event.preventDefault();
+                alert('Preencha os campos campeão');
+             }
+             else if (!emailRegex.test(inputDeEmail.value))
+            {
+            event.preventDefault();
+            alert('Por favor, insira um email válido');
+            }
+        })
+        
+    </script>
+
 </body>
 
 
 
-</head>
+
 
 </html>
