@@ -77,8 +77,21 @@ body{
     height: 40px;
     background-color:black;
     border-bottom:10px solid darkviolet;
+    transition: border-bottom 0.5 ease;
     
 }
+/*Remover borda quando scrollar*/
+.cabecalho.noBorder{
+    border-bottom-color: transparent;
+    transition: border-bottom 0.5 ease;
+}
+
+/*Remover fundo preto quando scrollar. PS: Ainda não está sendo utilizado*/
+.cabecalho.noBackground
+{
+    background-color:transparent;
+}
+
 
 
 .texto_cabecalho {
