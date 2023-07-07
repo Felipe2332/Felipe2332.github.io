@@ -13,8 +13,9 @@ window.addEventListener('scroll',function()
             navbar.classList.add('noBorder')
             //navbar.classList.add('noBackground')
         });
+        
     }
-    else
+    else/*AJUSTAR AQUI. PARECE QUE MESMO EM RESOLUÇÕES MENORES ELE SÓ EXECUTA ESSE ELSE*/
     {
         navbar.style.padding = '10px';
         navLinks.forEach(function(link) {
@@ -23,6 +24,24 @@ window.addEventListener('scroll',function()
             //navbar.classList.remove('noBackground')
         });
     }
+
+    window.addEventListener('resize', function() {
+        var navbar = document.querySelector('.cabecalho');
+        var navLinks = document.querySelectorAll('.texto_cabecalho');
+        var larguraTela = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    
+        if (larguraTela <= 1080 && window.scrollY > 0) {
+            navbar.style.padding = '10px';
+            navLinks.forEach(function(link) {
+                link.style.fontSize = '4vw';
+            });
+        } else {
+            navbar.style.padding = '10px';
+            navLinks.forEach(function(link) {
+                link.style.fontSize = '20vw';
+            });
+        }
+    });
 });
 
 

@@ -17,6 +17,8 @@ body{
         padding: 0;
         /*Ocupa todo o espaço de largura da página, antes nem o banner nem o rodapé estavam ocupando*/
         overflow-x: hidden;
+        overflow-y: visible;
+        
         
 }
 
@@ -298,4 +300,56 @@ a:hover.barra, a:active.barra{
 .dropdown:hover .dropdown-content {
     display: block;
 }
-                
+
+
+/*Estilos para telas menores*/
+
+@media screen and (max-width: 1080px){
+    
+    .corpo
+    {
+        /*margin-right: 300px;
+        margin-left: 280px;*/
+        margin:auto;
+        height: auto;
+        min-height: 100%;
+        
+        margin-bottom:30px;
+        margin-top: -50px;
+        width: 80%;
+        padding-top: 15px;
+        padding-bottom: 10px;
+        border-radius: 20px;/*Bordas redondas*/
+        font-size: 4vw;
+        padding: 50px;
+        background-color: rgb(50, 49, 49); 
+        }
+
+    .texto_cabecalho
+    {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 4vw;/*Mudou aqui*/
+    }
+
+    .cabecalho
+    {
+        max-width: 100%;
+        width: 100%;
+        position: fixed;
+        padding: 10px;
+        top:0;
+        left:0;
+        height: 100px; /*Mudou aqui*/
+        background-color:black;
+        border-bottom:10px solid darkviolet;
+        transition: border-bottom 0.5 ease;
+        
+    }
+
+    
+}  
+
